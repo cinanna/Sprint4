@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.PageObjects.PageObjectsForPostOrder;
-import org.example.PageObjects.PageObjectsForRentPage;
+import org.example.pageobjects.PageObjectsForPostOrder;
+import org.example.pageobjects.PageObjectsForRentPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;

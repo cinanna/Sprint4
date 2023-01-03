@@ -1,4 +1,4 @@
-package org.example.PageObjects;
+package org.example.pageobjects;
 
 import org.openqa.selenium.By;
 
@@ -27,6 +27,7 @@ public class PageObjectsForMainPage {
     public By textInButtonSeven = By.id("accordion__panel-7");
     //Локаторы Ответоа для Вопросов о важном
 
-    public By orderButton = By.xpath("html/body/div/div/div/div/div/button[@class='Button_Button__ra12g']");
+    // public By orderButton = By.xpath("html/body/div/div/div/div/div/button[@class='Button_Button__ra12g']");
+    public By orderButton = By.xpath(".//div/button[@class='Button_Button__ra12g']");
     //Локатор кнопки "Заказать"
 }

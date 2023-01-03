@@ -1,7 +1,7 @@
 package Sprint4Tests;
 
 import org.example.MainPage;
-import org.example.PageObjects.PageObjectsForMainPage;
+import org.example.pageobjects.PageObjectsForMainPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;

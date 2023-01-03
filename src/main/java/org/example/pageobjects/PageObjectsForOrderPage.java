@@ -1,4 +1,4 @@
-package org.example.PageObjects;
+package org.example.pageobjects;
 import org.openqa.selenium.By;
 
 public class PageObjectsForOrderPage {

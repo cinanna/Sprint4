@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.PageObjects.PageObjectsForMainPage;
+import org.example.pageobjects.PageObjectsForMainPage;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

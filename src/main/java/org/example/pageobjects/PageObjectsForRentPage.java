@@ -1,4 +1,4 @@
-package org.example.PageObjects;
+package org.example.pageobjects;
 
 import org.openqa.selenium.By;
 
@@ -10,5 +10,5 @@ public class PageObjectsForRentPage {
     public By black = By.id("black");
     public By grey = By.id("grey");
    // public By orderButton = By.xpath("html/body/div/div/div/div/button[text() = 'Заказать']");
-    public By orderButton = By.xpath("html/body/div/div/div/div/button[@class = 'Button_Button__ra12g Button_Middle__1CSJM']");
+    public By orderButton = By.xpath(".//div/button[@class = 'Button_Button__ra12g Button_Middle__1CSJM']");
 }

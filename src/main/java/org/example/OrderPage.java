@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.PageObjects.PageObjectsForMainPage;
-import org.example.PageObjects.PageObjectsForOrderPage;
+import org.example.pageobjects.PageObjectsForMainPage;
+import org.example.pageobjects.PageObjectsForOrderPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
