@@ -1,10 +1,6 @@
 package Sprint4Tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.example.MainPage;
-import org.example.OrderPage;
-import org.example.PostOrder;
-import org.example.RentPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,6 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.example.pageobjects.pomMainPage;
+import org.example.pageobjects.pomOrderPage;
+import org.example.pageobjects.pomRentPage;
+import org.example.pageobjects.pomPostOrder;
 
 import static org.junit.Assert.assertTrue;
 
@@ -50,12 +50,12 @@ public class TestsForTaskTwo {
     @Test
     public void checkOrder() {
         driver = new ChromeDriver();
-        OrderPage orderPage = new OrderPage(driver);
-        MainPage mainPage = new MainPage(driver);
-        RentPage rentPage = new RentPage(driver);
-        PostOrder postOrder = new PostOrder(driver);
+        pomOrderPage orderPage = new pomOrderPage(driver);
+        pomMainPage mainPage = new pomMainPage(driver);
+        pomRentPage rentPage = new pomRentPage(driver);
+        pomPostOrder postOrder = new pomPostOrder(driver);
         mainPage.openMainPage();
-        orderPage.openOrderPage();
+        mainPage.openOrderPage();
         orderPage.fillOrderPage(name, surname, address, phone);
 
         rentPage.openRentPage();
