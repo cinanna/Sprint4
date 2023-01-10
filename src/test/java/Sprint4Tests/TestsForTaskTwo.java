@@ -8,11 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.example.pageobjects.pomMainPage;
-import org.example.pageobjects.pomOrderPage;
-import org.example.pageobjects.pomRentPage;
-import org.example.pageobjects.pomPostOrder;
-
+import org.example.pageobjects.MainPage;
+import org.example.pageobjects.OrderPage;
+import org.example.pageobjects.RentPage;
+import org.example.pageobjects.PostOrder;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
@@ -39,34 +38,26 @@ public class TestsForTaskTwo {
         };
     }
 
-
-
     @Before
     public void startUp() {
         WebDriverManager.chromedriver().setup();
     }
 
-
     @Test
     public void checkOrder() {
         driver = new ChromeDriver();
-        pomOrderPage orderPage = new pomOrderPage(driver);
-        pomMainPage mainPage = new pomMainPage(driver);
-        pomRentPage rentPage = new pomRentPage(driver);
-        pomPostOrder postOrder = new pomPostOrder(driver);
+        OrderPage orderPage = new OrderPage(driver);
+        MainPage mainPage = new MainPage(driver);
+        RentPage rentPage = new RentPage(driver);
+        PostOrder postOrder = new PostOrder(driver);
         mainPage.openMainPage();
         mainPage.openOrderPage();
         orderPage.fillOrderPage(name, surname, address, phone);
-
         rentPage.openRentPage();
         rentPage.fillRentInfo("05.01.2023", "Без комментариев");
-
         postOrder.confirmOrder();
-
         isOrdered = postOrder.isOrderTrue();
-
         assertTrue("Заказ не оформлен", isOrdered);
-
     }
 
     @After

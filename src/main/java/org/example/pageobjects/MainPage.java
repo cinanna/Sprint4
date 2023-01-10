@@ -6,10 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
-public class pomMainPage {
+public class MainPage {
     private By pagelogo = By.className("Header_LogoYandex__3TSOI");
     // Локатор для Лого
 
@@ -33,13 +32,12 @@ public class pomMainPage {
     public By textInButtonSeven = By.id("accordion__panel-7");
     //Локаторы Ответоа для Вопросов о важном
 
-    // public By orderButton = By.xpath("html/body/div/div/div/div/div/button[@class='Button_Button__ra12g']");
     public By orderButton = By.xpath(".//div/button[@class='Button_Button__ra12g']");
     //Локатор кнопки "Заказать"
 
     private WebDriver driver;
 
-    public pomMainPage (WebDriver driver) {
+    public MainPage(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -65,7 +63,4 @@ public class pomMainPage {
         new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(ExpectedConditions.visibilityOfElementLocated(pagelogo));
     }
-
-
-
 }

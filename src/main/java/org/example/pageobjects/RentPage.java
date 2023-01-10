@@ -4,10 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.WebDriver;
-
 import java.time.Duration;
 
-public class pomRentPage {
+public class RentPage {
     private WebDriver driver;
     private By dateRent = By.cssSelector("input[placeholder = '* Когда привезти самокат']");
     private By commentField = By.cssSelector("input[placeholder = 'Комментарий для курьера']");
@@ -15,11 +14,10 @@ public class pomRentPage {
     private By rentList = By.className("Dropdown-option");
     private By black = By.id("black");
     private By grey = By.id("grey");
-    // private By orderButton = By.xpath("html/body/div/div/div/div/button[text() = 'Заказать']");
     private By orderButton = By.xpath(".//div/button[@class = 'Button_Button__ra12g Button_Middle__1CSJM']");
     private By buttonNext = By.xpath(".//button[text()='Далее']");
 
-    public pomRentPage (WebDriver driver) {
+    public RentPage(WebDriver driver) {
         this.driver = driver;
     }
 

@@ -3,7 +3,7 @@ package org.example.pageobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class pomOrderPage {
+public class OrderPage {
     private WebDriver driver;
     private By nameField = By.cssSelector("input[placeholder = '* Имя']");
     //Локатор для ввода имени
@@ -18,8 +18,7 @@ public class pomOrderPage {
     private By phoneField = By.cssSelector("input[placeholder = '* Телефон: на него позвонит курьер']");
     //Локатр для номера телефонв
 
-
-    public pomOrderPage (WebDriver driver) {
+    public OrderPage(WebDriver driver) {
         this.driver = driver;
     }
 

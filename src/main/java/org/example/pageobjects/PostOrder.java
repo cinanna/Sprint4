@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class pomPostOrder {
+public class PostOrder {
     private WebDriver driver;
     public By orderButton = By.xpath(".//div/button[@class = 'Button_Button__ra12g Button_Middle__1CSJM']");
     //Локатор для кнопки Далее
@@ -16,7 +16,7 @@ public class pomPostOrder {
     private By orderTrue = By.className("Order_ModalHeader__3FDaJ");
     //Локатор успешного заказа
 
-    public pomPostOrder (WebDriver driver) {
+    public PostOrder(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -33,6 +33,4 @@ public class pomPostOrder {
         boolean isOrdered = driver.findElement(orderTrue).isDisplayed();
         return isOrdered;
     }
-
-
 }
